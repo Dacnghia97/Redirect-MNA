@@ -4,32 +4,11 @@
   <meta charset="UTF-8" />
   <title>Đang chuyển hướng...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <script>
-    const redirectUrl = "https://zalo.me/s/4591914726847703424/";
-    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const button = document.getElementById("btn");
-    const countdownBox = document.getElementById("cd");
-    const countdown = document.getElementById("time");
-
-    function redirectNow() {
-      window.location.href = redirectUrl;
-    }
-
-    if (isIOS) {
-      button.style.display = "block";
-    } else {
-      countdownBox.style.display = "block";
-      let timeLeft = 10;
-      countdown.textContent = timeLeft;
-      const timer = setInterval(() => {
-        timeLeft--;
-        countdown.textContent = timeLeft;
-        if (timeLeft <= 0) {
-          clearInterval(timer);
-          redirectNow();
-        }
-      }, 1000);
-    }
+  <script>
+    window.onload = function () {
+      // Thay link bên dưới bằng link MiniApp thật của bạn
+      window.location.href = "https://zalo.me/s/4591914726847703424";
+    };
   </script>
 </head>
 <body>
